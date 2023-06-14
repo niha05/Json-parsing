@@ -1,0 +1,19 @@
+import json
+f =  open("sample_data.json", "r")
+data = json.load(f)
+for i in data['parametersList']:
+    print(i)
+
+dict = {}
+parameter_info = data['parametersList']
+for parameter in parameter_info:
+    key = parameter['parameterName']
+    key1 = parameter['min']
+    key2 = parameter['max']
+    key3 = parameter['avg']
+    print(key)
+    print("The minimum value: ", key1)
+    print("The max value: ", key2)
+    print("The avg value: ", key3)
+    
+   
